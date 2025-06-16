@@ -92,6 +92,19 @@ public class PortariaController {
     }
 
     /**
+     * Limpar todas as reservas (ativas e histórico)
+     */
+    @DeleteMapping("/limpar")
+    public ResponseEntity<Map<String, Object>> limparTodasReservas() {
+        try {
+            Map<String, Object> resultado = reservaService.limparTodasReservas();
+            return ResponseEntity.ok(resultado);
+        } catch (RuntimeException e) {
+            return ResponseEntity.badRequest().build();
+        }
+    }
+
+    /**
      * Dashboard
      */
     @GetMapping("/dashboard")
@@ -100,7 +113,7 @@ public class PortariaController {
         List<ReservaResponseDTO> todasReservas = reservaService.findAll();
 
         long reservasAtivas = todasReservas.stream()
-                .filter(r -> r.getDataDevolucao() == null)
+                .filter(r -> r.dataDevolucao() == null)
                 .count();
 
         Map<String, Object> dashboard = Map.of(

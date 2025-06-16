@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -43,11 +44,11 @@ public class ReservaService {
 
     public ReservaResponseDTO criarReserva(ReservaRequestDTO request) {
         // Buscar usuário pela matrícula
-        User usuario = userService.findByMatricula(request.getMatriculaUsuario())
-                .orElseThrow(() -> new RuntimeException("Usuário não encontrado com a matrícula: " + request.getMatriculaUsuario()));
+        User usuario = userService.findByMatricula(request.matriculaUsuario())
+                .orElseThrow(() -> new RuntimeException("Usuário não encontrado com a matrícula: " + request.matriculaUsuario()));
 
         // Buscar item
-        Item item = itemService.findById(request.getItemId())
+        Item item = itemService.findById(request.itemId())
                 .orElseThrow(() -> new RuntimeException("Item não encontrado"));
 
         // Verificar se o item está disponível
@@ -56,7 +57,7 @@ public class ReservaService {
         }
 
         // Verificar se já existe uma reserva ativa para este item
-        Optional<Reserva> reservaAtiva = reservaRepository.findByItemIdAndDataDevolucaoIsNull(request.getItemId());
+        Optional<Reserva> reservaAtiva = reservaRepository.findByItemIdAndDataDevolucaoIsNull(request.itemId());
         if (reservaAtiva.isPresent()) {
             throw new RuntimeException("Item já possui uma reserva ativa");
         }
@@ -82,7 +83,7 @@ public class ReservaService {
                 .orElseThrow(() -> new RuntimeException("Reserva não encontrada"));
 
         // Verificar se a matrícula ta certa
-        if (!reserva.getMatriculaUsuario().equals(request.getMatriculaUsuario())) {
+        if (!reserva.getMatriculaUsuario().equals(request.matriculaUsuario())) {
             throw new RuntimeException("Matrícula não confere com a reserva");
         }
 
@@ -102,7 +103,7 @@ public class ReservaService {
                 .orElseThrow(() -> new RuntimeException("Reserva não encontrada"));
 
         // Verificar se a matrícula ta certa
-        if (!reserva.getMatriculaUsuario().equals(request.getMatriculaUsuario())) {
+        if (!reserva.getMatriculaUsuario().equals(request.matriculaUsuario())) {
             throw new RuntimeException("Matrícula não confere com a reserva");
         }
 
@@ -131,27 +132,71 @@ public class ReservaService {
                 .collect(Collectors.toList());
     }
 
-    private ReservaResponseDTO convertToResponseDTO(Reserva reserva) {
-        ReservaResponseDTO dto = new ReservaResponseDTO();
-        dto.setId(reserva.getId());
-        dto.setItemId(reserva.getItemId());
-        dto.setNomeItem(reserva.getNomeItem());
-        dto.setUsuarioId(reserva.getUsuarioId());
-        dto.setNomeUsuario(reserva.getNomeUsuario());
-        dto.setMatriculaUsuario(reserva.getMatriculaUsuario());
-        dto.setDataReserva(reserva.getDataReserva());
-        dto.setDataRetirada(reserva.getDataRetirada());
-        dto.setDataDevolucao(reserva.getDataDevolucao());
+    /**
+     * Limpa todas as reservas (ativas e histórico) e marca todos os itens como disponíveis
+     */
+    public Map<String, Object> limparTodasReservas() {
+        // Buscar todas as reservas
+        List<Reserva> todasReservas = reservaRepository.findAll();
 
-        // Determinar status do item
-        if (reserva.getDataDevolucao() != null) {
-            dto.setStatus("DEVOLVIDO");
-        } else if (reserva.getDataRetirada() != null) {
-            dto.setStatus("RETIRADO");
-        } else {
-            dto.setStatus("RESERVADO");
+        // Contar reservas ativas e total
+        long reservasAtivas = todasReservas.stream()
+                .filter(r -> r.getDataDevolucao() == null)
+                .count();
+
+        long totalReservas = todasReservas.size();
+
+        // Buscar todos os itens que estão em reservas ativas para disponibilizar
+        List<String> itensParaDisponibilizar = todasReservas.stream()
+                .filter(r -> r.getDataDevolucao() == null)
+                .map(Reserva::getItemId)
+                .distinct()
+                .collect(Collectors.toList());
+
+        // Marcar todos os itens como disponíveis
+        for (String itemId : itensParaDisponibilizar) {
+            try {
+                itemService.marcarComoDisponivel(itemId);
+            } catch (Exception e) {
+                // Log do erro mas continua o processo
+                System.err.println("Erro ao disponibilizar item " + itemId + ": " + e.getMessage());
+            }
         }
 
-        return dto;
+        // Deletar todas as reservas
+        reservaRepository.deleteAll();
+
+        return Map.of(
+                "message", "Todas as reservas foram removidas com sucesso",
+                "reservasAtivasRemovidas", reservasAtivas,
+                "totalReservasRemovidas", totalReservas,
+                "itensDisponibilizados", itensParaDisponibilizar.size(),
+                "timestamp", LocalDateTime.now()
+        );
+    }
+
+    private ReservaResponseDTO convertToResponseDTO(Reserva reserva) {
+        // Determinar status do item
+        String status;
+        if (reserva.getDataDevolucao() != null) {
+            status = "DEVOLVIDO";
+        } else if (reserva.getDataRetirada() != null) {
+            status = "RETIRADO";
+        } else {
+            status = "RESERVADO";
+        }
+
+        return new ReservaResponseDTO(
+                reserva.getId(),
+                reserva.getItemId(),
+                reserva.getNomeItem(),
+                reserva.getUsuarioId(),
+                reserva.getNomeUsuario(),
+                reserva.getMatriculaUsuario(),
+                reserva.getDataReserva(),
+                reserva.getDataRetirada(),
+                reserva.getDataDevolucao(),
+                status
+        );
     }
 }
