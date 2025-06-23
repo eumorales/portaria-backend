@@ -62,3 +62,19 @@ Este sistema permite a **gestão de usuários, itens e reservas** em ambientes c
 - `POST /api/portaria/cracha/{matricula}/devolver/{reservaId}` – Devolver via crachá
 - `GET /api/portaria/cracha/{matricula}/reservas-ativas` – Consultar reservas ativas via crachá
 - `GET /api/portaria/dashboard` – Dashboard para porteiros  
+
+---
+
+## 📈 Diagramas
+
+### Diagrama de Classe
+
+![Diagrama de Classe](https://github.com/user-attachments/assets/7952bb3c-1b3a-40f0-b168-6153f12539cc)
+
+### Diagrama de Domínio 
+
+![Diagrama de Domínio](https://github.com/user-attachments/assets/3e813b2f-dc2c-47a1-b1a8-1ec26f25bde9)
+
+### Diagrama de Caso de Uso 
+
+### Descritivo de Caso de Uso
