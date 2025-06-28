@@ -4,6 +4,15 @@ Este sistema permite a **gestão de usuários, itens e reservas** em ambientes c
 
 ---
 
+# 👨🏻‍💼 Integrantes do grupo
+
+> 🙋🏻‍♂️ Matheus Nogueira Albuquerque <br>
+> 🙋🏻‍♂️ Gilberto Morales <br>
+> 🙋🏻‍♂️ Romeo Noro Guterres <br>
+> 🙋🏻‍♂️ Anthony Guedes <br>
+
+---
+
 ## 🧭 Fluxo Principal
 
 1. 👤 Criar usuários (alunos, professores, porteiros)
