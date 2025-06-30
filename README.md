@@ -106,7 +106,8 @@ Devolver Item <br>
 
 ### Diagrama de Caso de Uso 
 
-![DiagramaCasoDeUsoSistemaPortariaImagemJPG](https://github.com/user-attachments/assets/f364f72b-ec65-4e62-afc2-d28708fea00f)
+![image](https://github.com/user-attachments/assets/eb4994ca-90c3-44ad-85ee-a925755763a7)
+
 
 ### Descritivo de Caso de Uso
 
@@ -114,21 +115,13 @@ Devolver Item <br>
 
 ![image](https://github.com/user-attachments/assets/a5235b27-9460-4910-9993-2008027c1dd3)
 
-
 <br>
 
 > LerCrachá <br>
 
-![image](https://github.com/user-attachments/assets/0786b68f-599b-4923-8b76-5e95b72482ba)
-
+![image](https://github.com/user-attachments/assets/2935a8f2-f8fc-45d5-a8df-74b4b682f3d7)
 
 <br>
-
-
-> GerenciarReservasUsuário <br>
-
-![image](https://github.com/user-attachments/assets/cb33ff77-bbbb-42a4-8e78-15ca1fb72e78)
-
 
 > CadastrarNovoItem <br>
 
