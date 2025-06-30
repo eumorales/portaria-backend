@@ -112,64 +112,23 @@ Devolver Item <br>
 
 > AbrirDashboard <br>
 
-![image](https://github.com/user-attachments/assets/9cb0f4e5-f78f-4be2-81fe-43b160a5a15d)
+![image](https://github.com/user-attachments/assets/a5235b27-9460-4910-9993-2008027c1dd3)
+
 
 <br>
 
 > LerCrachá <br>
 
-![image](https://github.com/user-attachments/assets/d58645b9-dd52-4e5b-8b5c-94e31a7a2cce)
+![image](https://github.com/user-attachments/assets/0786b68f-599b-4923-8b76-5e95b72482ba)
+
 
 <br>
 
-> DigitarMatrícula <br>
-
-![image](https://github.com/user-attachments/assets/789550d5-7c10-419f-9180-7abf096fe8fd)
-
-<br>
-
-> EscanearMatrícula <br>
-
-![image](https://github.com/user-attachments/assets/71876de8-2fe4-4af2-87d0-0e3f3113526e)
-
-<br>
 
 > GerenciarReservasUsuário <br>
 
-![image](https://github.com/user-attachments/assets/20bfcae6-0385-4621-9977-f014777c0e50)
+![image](https://github.com/user-attachments/assets/cb33ff77-bbbb-42a4-8e78-15ca1fb72e78)
 
-<br>
-
-> BuscarOutroUsuário <br>
-
-![image](https://github.com/user-attachments/assets/96e90230-4b04-4a46-b12f-d7c6a90d3d18)
-
-<br>
-
-> FazerReserva <br>
-
-![image](https://github.com/user-attachments/assets/1c10f593-e06a-4dc8-bd01-2a686ce51dac)
-
-<br>
-
-> RetirarItem <br>
-
-![image](https://github.com/user-attachments/assets/da68504e-c025-4c07-ba13-cde9824b3199)
-
-<br>
-
-> DevolverItem <br>
-
-![image](https://github.com/user-attachments/assets/5f24dc12-f219-4011-a644-f34da01d4646)
-
-
-<br>
-
-> GerenciarItens <br>
-
-![image](https://github.com/user-attachments/assets/27f98ca9-abac-4c83-9709-304d50a968d4)
-
-<br>
 
 > CadastrarNovoItem <br>
 
