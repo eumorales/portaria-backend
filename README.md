@@ -86,23 +86,53 @@ Este sistema permite a **gestão de usuários, itens e reservas** em ambientes c
 
 ### Diagrama de Sequência
 
-> Usuario = Porteiro/Adm
+Criar item <br>
+![image](https://github.com/user-attachments/assets/75675d80-fea5-4d64-b79c-f1a3892aff7c)
 
-Reservar Item <br>
-![CriacaoReservaViaCrachaDiagramaSequencia](https://github.com/user-attachments/assets/3f491cb7-2265-4857-ab09-6268ca4e747d)
+Reservar por crachá <br>
+![image](https://github.com/user-attachments/assets/fb320684-82cd-41c3-a434-7b6cbc95c863)
+
+Retirar por crachá <br>
+![image](https://github.com/user-attachments/assets/977d431e-46bd-4ee7-8cde-b2dc879bb46e)
+
+Devolver por crachá <br>
+![image](https://github.com/user-attachments/assets/7a24b471-7c56-4a6d-a936-caad0ba50041)
+
+Criar usuário <br>
+
+![image](https://github.com/user-attachments/assets/cd9082ec-912b-4215-be9c-97c678acb3ae)
 
 <br>
 
-Retirar Item <br>
-![RetiradaItemViaCrachaDiagramaSequencia](https://github.com/user-attachments/assets/59fb65ce-1a5a-4124-bdb3-1a5cbc99863f)
+Atualizar usuário <br>
+
+![image](https://github.com/user-attachments/assets/f8d12ec1-f263-42d8-9cfb-5b2a0d94e13f)
+
 
 <br>
 
-Devolver Item <br>
-![DevolucaoDeItemViaCrachaDiagramaSequencia](https://github.com/user-attachments/assets/29558563-a28b-4cf0-ada3-c5351e8d782f)
+Deletar usuário <br>
+
+![image](https://github.com/user-attachments/assets/9ef50478-095f-4a09-81d6-9c9a5d34e337)
 
 <br>
 
+Criar reserva <br>
+
+![image](https://github.com/user-attachments/assets/b61aa7e1-53e2-422e-9a10-7f8852eefa03)
+
+<br>
+
+Registrar retirada <br>
+
+![image](https://github.com/user-attachments/assets/e8c68b3b-0e44-4d5e-9fb4-2584a4f51cd7)
+
+
+<br>
+
+Registrar devolução <br>
+![image](https://github.com/user-attachments/assets/e75e62a5-4b6d-41f5-b300-2d15823d0f29)
+<br>
 
 ### Diagrama de Caso de Uso 
 
