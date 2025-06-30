@@ -84,6 +84,26 @@ Este sistema permite a **gestão de usuários, itens e reservas** em ambientes c
 
 ![Diagrama de Domínio](https://github.com/user-attachments/assets/3e813b2f-dc2c-47a1-b1a8-1ec26f25bde9)
 
+### Diagrama de Sequência
+
+> Usuario = Porteiro/Adm
+
+Reservar Item <br>
+![CriacaoReservaViaCrachaDiagramaSequencia](https://github.com/user-attachments/assets/3f491cb7-2265-4857-ab09-6268ca4e747d)
+
+<br>
+
+Retirar Item <br>
+![RetiradaItemViaCrachaDiagramaSequencia](https://github.com/user-attachments/assets/59fb65ce-1a5a-4124-bdb3-1a5cbc99863f)
+
+<br>
+
+Devolver Item <br>
+![DevolucaoDeItemViaCrachaDiagramaSequencia](https://github.com/user-attachments/assets/29558563-a28b-4cf0-ada3-c5351e8d782f)
+
+<br>
+
+
 ### Diagrama de Caso de Uso 
 
 ![DiagramaCasoDeUsoSistemaPortariaImagemJPG](https://github.com/user-attachments/assets/f364f72b-ec65-4e62-afc2-d28708fea00f)
