@@ -82,7 +82,7 @@ Este sistema permite a **gestão de usuários, itens e reservas** em ambientes c
 
 ### Diagrama de Domínio 
 
-![Diagrama de Domínio](https://github.com/user-attachments/assets/3e813b2f-dc2c-47a1-b1a8-1ec26f25bde9)
+![image](https://github.com/user-attachments/assets/efc0a6e2-9382-45e5-8430-cda694f6de2d)
 
 ### Diagrama de Sequência
 
