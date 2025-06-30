@@ -86,7 +86,7 @@ Este sistema permite a **gestão de usuários, itens e reservas** em ambientes c
 
 ### Diagrama de Caso de Uso 
 
-![DiagramaCasoDeUsoSistemaPortariaImagemJPG](https://github.com/user-attachments/assets/a8951d49-0347-4309-b257-e3698c47a07a)
+![DiagramaCasoDeUsoSistemaPortariaImagemJPG](https://github.com/user-attachments/assets/f364f72b-ec65-4e62-afc2-d28708fea00f)
 
 ### Descritivo de Caso de Uso
 
