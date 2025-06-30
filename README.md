@@ -76,7 +76,11 @@ Este sistema permite a **gestão de usuários, itens e reservas** em ambientes c
 
 ## 📈 Diagramas
 
-### Diagrama de Classe
+### Diagrama de Classe 
+
+> Está apenas o do User pois o IntelliJ está com um bug ao gerar os outros, esta puxando outras classes mesmo não selecionadas, mas todas seguem a logica de: <br> <br>
+> Model -> Repository -> Controller -> Service. <br> <br>
+> Igual o exemplo do User abaixo
 
 User <br>
 ![image](https://github.com/user-attachments/assets/c1b50b94-f3c2-46ab-a275-cee9789b52f5)
