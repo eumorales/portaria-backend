@@ -78,7 +78,11 @@ Este sistema permite a **gestão de usuários, itens e reservas** em ambientes c
 
 ### Diagrama de Classe
 
-![Diagrama de Classe](https://github.com/user-attachments/assets/7952bb3c-1b3a-40f0-b168-6153f12539cc)
+User <br>
+![image](https://github.com/user-attachments/assets/c1b50b94-f3c2-46ab-a275-cee9789b52f5)
+
+User <br>
+![image](https://github.com/user-attachments/assets/c1b50b94-f3c2-46ab-a275-cee9789b52f5)
 
 ### Diagrama de Domínio 
 
