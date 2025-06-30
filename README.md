@@ -81,9 +81,6 @@ Este sistema permite a **gestão de usuários, itens e reservas** em ambientes c
 User <br>
 ![image](https://github.com/user-attachments/assets/c1b50b94-f3c2-46ab-a275-cee9789b52f5)
 
-User <br>
-![image](https://github.com/user-attachments/assets/c1b50b94-f3c2-46ab-a275-cee9789b52f5)
-
 ### Diagrama de Domínio 
 
 ![image](https://github.com/user-attachments/assets/efc0a6e2-9382-45e5-8430-cda694f6de2d)
