@@ -147,12 +147,6 @@ Devolver Item <br>
 
 <br>
 
-> GerenciarUsuário <br>
-
-![image](https://github.com/user-attachments/assets/4d0146aa-c449-4fdf-83f2-d9a6772c6e68)
-
-<br> 
-
 > CadastrarNovoUsuário <br>
 
 ![image](https://github.com/user-attachments/assets/398dd7c1-3eee-40b5-b544-14cd1572a296)
